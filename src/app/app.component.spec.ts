@@ -14,11 +14,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'prs-client-ng17' title`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('prs-client-ng17');
-  });
+  // it(`should have the 'prs-client-ng17' title`, () => {
+  //   const fixture = TestBed.createComponent(AppComponent);
+  //   const app = fixture.componentInstance;
+  //   expect(app.title).toEqual('prs-client-ng17');
+  // });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);

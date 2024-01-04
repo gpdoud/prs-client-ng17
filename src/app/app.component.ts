@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { AppConfigService } from './app-config.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'prs-client-ng17';
+  appConfig = inject(AppConfigService);
+
+  ngOnInit() {
+    console.log("AppComponent", this.appConfig);
+  }
 }
