@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        @for(menu of menus; track menu.route) {
+            <li>
+                <a routerLink="/{{menu.route}}">{{ menu.display }}</a>
+            </li>
+        }
+    </ul>
+</nav>

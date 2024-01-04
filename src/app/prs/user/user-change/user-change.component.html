@@ -1,0 +1,52 @@
+<app-menu></app-menu>
+<header>
+  <span class="page-title">User Change</span>
+</header>
+<main>
+  <table class="table table-sm">
+    <tbody>
+      <tr>
+        <td>Id</td>
+        <td><input [ngModel]="user.id" disabled /></td>
+      </tr>
+      <tr>
+        <td>Lastname</td>
+        <td><input [(ngModel)]="user.lastname" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Firstname</td>
+        <td><input [(ngModel)]="user.firstname" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Username</td>
+        <td><input [(ngModel)]="user.username" [disabled]="readonly" /></td>
+      </tr>
+      <tr hidden>
+        <td>Password</td>
+        <td><input [(ngModel)]="user.password" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><input [(ngModel)]="user.phone" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><input [(ngModel)]="user.email" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Reviewer</td>
+        <td><input [(ngModel)]="user.isReviewer" type="checkbox" [disabled]="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Admin</td>
+        <td><input [(ngModel)]="user.isAdmin" type="checkbox" [disabled]="readonly" /></td>
+      </tr>
+    </tbody>
+  </table>
+  @if(!readonly) {
+    <div>
+        <button (click)="save()" class="btn btn-primary">Save</button>
+    </div>
+    }
+</main>
+<footer></footer>
